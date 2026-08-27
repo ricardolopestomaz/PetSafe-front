@@ -189,7 +189,7 @@ Use este espaço para exemplos de uso do AuTag: fluxo de cadastro do pet, geraç
 - [ ] Protótipo no Figma
 - [ ] MVP do site (leitura da medalha via QR Code)
 - [ ] MVP do app (cadastro de tutor e pet)
-- [ ] Integração com backend (Supabase/Firebase)
+- [ ] Integração com backend (Supabase)
 - [ ] Notificações push
 - [ ] Plano Premium (assinatura)
 
