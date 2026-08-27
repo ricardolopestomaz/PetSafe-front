@@ -26,9 +26,6 @@
 <!-- PROJECT LOGO -->
 <br/>
 <div align="center">
-  <a href="https://github.com/ricardolopestomaz/AuTag">
-    <img src="https://github.com/ricardolopestomaz/DriverLux/blob/main/public/assets/img/marcaUFT_vertical.png" alt="Logo" width="90" height="90">
-  </a>
 
   <h2 align="center">🐾 AuTag</h2>
 
