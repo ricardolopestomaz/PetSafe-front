@@ -27,7 +27,7 @@
 <br/>
 <div align="center">
 
-  <h2 align="center">🐾 APetSafe</h2>
+  <h2 align="center">🐾 PetSafe</h2>
 
   <p align="center">
     Medalha inteligente para pets: identificação passiva via QR Code/NFC + app de reencontro em tempo real.
