@@ -15,11 +15,11 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Contributors](https://img.shields.io/github/contributors/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/network/members)
+[![Stargazers](https://img.shields.io/github/stars/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/stargazers)
+[![Issues](https://img.shields.io/github/issues/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/issues)
+[![MIT License](https://img.shields.io/github/license/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/blob/main/LICENSE)
 
 </div>
 
@@ -37,9 +37,9 @@
     <br />
     <a href="#">Ver Demo</a>
     ·
-    <a href="https://github.com/ricardolopestomaz/PetSafe/issues/new?labels=bug">Reportar Bug</a>
+    <a href="https://github.com/ricardolopestomaz/PetSafe-front/issues/new?labels=bug">Reportar Bug</a>
     ·
-    <a href="https://github.com/ricardolopestomaz/PetSafe/issues/new?labels=enhancement">Solicitar Funcionalidade</a>
+    <a href="https://github.com/ricardolopestomaz/PetSafe-front/issues/new?labels=enhancement">Solicitar Funcionalidade</a>
   </p>
 </div>
 
@@ -100,7 +100,7 @@ O projeto segue um modelo de **hardware de entrada + assinatura recorrente**: a 
 - **Canais:** venda direta online (site, Mercado Livre, Shopee), pontos físicos em pet shops (B2B2C) e lojas de aplicativos.
 - **Fontes de receita:** venda das medalhas, assinatura Premium mensal, comissões B2B (planos de saúde/seguros) e vendas por atacado.
 
-O detalhamento completo (canvas, unit economics e estratégia de go-to-market) está disponível em <a href="./docs/canvas.md">Modelo Canvas de Negócio</a>.
+O detalhamento completo (canvas, unit economics e estratégia de go-to-market) está disponível em <a href="https://miro.com/app/board/uXjVHtQToOI=/">Modelo Canvas de Negócio</a>.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -137,8 +137,8 @@ Siga os passos abaixo para rodar o site e o app localmente.
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/ricardolopestomaz/PetSafe.git
-   cd PetSafe/site
+   git clone https://github.com/ricardolopestomaz/PetSafe-front.git
+   cd PetSafe-front/site
    ```
 2. Instale as dependências
    ```sh
@@ -155,7 +155,7 @@ Siga os passos abaixo para rodar o site e o app localmente.
 
 1. Acesse a pasta do app
    ```sh
-   cd PetSafe/app
+   cd PetSafe-front/app
    ```
 2. Instale as dependências
    ```sh
@@ -193,7 +193,7 @@ Use este espaço para exemplos de uso do PetSafe: fluxo de cadastro do pet, gera
 - [ ] Notificações push
 - [ ] Plano Premium (assinatura)
 
-Veja as [issues abertas](https://github.com/ricardolopestomaz/PetSafe/issues) para a lista completa de funcionalidades propostas (e problemas conhecidos).
+Veja as [issues abertas](https://github.com/ricardolopestomaz/PetSafe-front/issues) para a lista completa de funcionalidades propostas (e problemas conhecidos).
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -213,10 +213,9 @@ Veja as [issues abertas](https://github.com/ricardolopestomaz/PetSafe/issues) pa
 
 ### Top contributors:
 
-<a href="https://github.com/ricardolopestomaz/PetSafe/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ricardolopestomaz/PetSafe" alt="contrib.rocks image" />
+<a href="https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ricardolopestomaz/PetSafe-front" alt="contrib.rocks image" />
 </a>
-
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- LICENSE -->
@@ -231,22 +230,21 @@ Distribuído sob a licença especificada em `LICENSE.txt`. Este projeto é desen
 
 Equipe PetSafe — Projeto acadêmico UFT
 
-Link do Projeto: [https://github.com/ricardolopestomaz/PetSafe](https://github.com/ricardolopestomaz/PetSafe)
+Link do Projeto: [https://github.com/ricardolopestomaz/PetSafe-front](https://github.com/ricardolopestomaz/PetSafe-front)
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/ricardolopestomaz/PetSafe.svg?style=for-the-badge
-[contributors-url]: https://github.com/ricardolopestomaz/PetSafe/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ricardolopestomaz/PetSafe.svg?style=for-the-badge
-[forks-url]: https://github.com/ricardolopestomaz/PetSafe/network/members
-[stars-shield]: https://img.shields.io/github/stars/ricardolopestomaz/PetSafe.svg?style=for-the-badge
-[stars-url]: https://github.com/ricardolopestomaz/PetSafe/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ricardolopestomaz/PetSafe.svg?style=for-the-badge
-[issues-url]: https://github.com/ricardolopestomaz/PetSafe/issues
-[license-shield]: https://img.shields.io/github/license/ricardolopestomaz/PetSafe.svg?style=for-the-badge
-[license-url]: https://github.com/ricardolopestomaz/PetSafe/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[contributors-url]: https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[forks-url]: https://github.com/ricardolopestomaz/PetSafe-front/network/members
+[stars-shield]: https://img.shields.io/github/stars/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[stars-url]: https://github.com/ricardolopestomaz/PetSafe-front/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[issues-url]: https://github.com/ricardolopestomaz/PetSafe-front/issues
+[license-shield]: https://img.shields.io/github/license/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[license-url]: https://github.com/ricardolopestomaz/PetSafe-front/blob/main/LICENSE.txt
 
 
 Join our community of developers creating universal apps.
