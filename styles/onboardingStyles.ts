@@ -21,8 +21,8 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 26,
     borderTopRightRadius: 26,
     paddingHorizontal: 30,
-    paddingTop: 20,
-    paddingBottom: 30,
+    paddingTop: 30,
+    paddingBottom: 70,
 
     alignItems: "center",
   },

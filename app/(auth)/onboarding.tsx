@@ -12,9 +12,9 @@ export default function Onboarding() {
   // Cria um array de imagens
   const images = [
     require("../../assets/images/onboarding-dog-1.png"),
+    require("../../assets/images/onboarding-cat-1.png"),
     require("../../assets/images/onboarding-dog-2.png"),
-    require("../../assets/images/onboarding-dog-3.png"),
-    require("../../assets/images/onboarding-dog-4.png"),
+    require("../../assets/images/onboarding-cat-2.png"),
   ];
 
   // Troca a imagem automaticamente
