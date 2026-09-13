@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   Alert,
@@ -15,39 +15,60 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import * as AuthController from '@/controller/authController';
+import { supabase } from '@/lib/supabaseClient';
 
 import {
   COLORS,
   authStyles as styles,
 } from '@/styles/authStyles';
 
-export default function Login() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+export default function RedefinirSenha() {
+  const [novaSenha, setNovaSenha] = useState('');
+
+  const [
+    confirmarSenha,
+    setConfirmarSenha,
+  ] = useState('');
+
   const [carregando, setCarregando] =
     useState(false);
 
-  async function entrar() {
+  useEffect(() => {
+    supabase.auth
+      .getSession()
+      .then(({ data }) => {
+        if (!data.session) {
+          router.replace('/(auth)/login');
+        }
+      });
+  }, []);
+
+  async function redefinir() {
     setCarregando(true);
 
     const resultado =
-      await AuthController.realizarLogin(
-        email,
-        senha
+      await AuthController.realizarRedefinicaoSenha(
+        novaSenha,
+        confirmarSenha
       );
 
     setCarregando(false);
 
     if (!resultado.sucesso) {
       Alert.alert(
-        'Erro ao entrar',
+        'Erro ao redefinir senha',
         resultado.mensagem
       );
 
       return;
     }
 
-    router.replace('/(tabs)');
+    Alert.alert(
+      'Senha redefinida',
+      'Sua senha foi alterada com sucesso.'
+    );
+
+    router.replace('/(auth)/login');
   }
 
   return (
@@ -64,36 +85,11 @@ export default function Login() {
 
         <View style={styles.card}>
           <Text style={styles.title}>
-            Entrar
+            Redefinir senha
           </Text>
 
           <Text style={styles.label}>
-            E-mail
-          </Text>
-
-          <View style={styles.inputContainer}>
-            <Ionicons
-              name="mail-outline"
-              size={20}
-              color={COLORS.blue}
-            />
-
-            <TextInput
-              style={styles.input}
-              value={email}
-              onChangeText={setEmail}
-              placeholder="nome_exemplo@gmail.com"
-              placeholderTextColor={
-                COLORS.placeholder
-              }
-              keyboardType="email-address"
-              autoCapitalize="none"
-              autoCorrect={false}
-            />
-          </View>
-
-          <Text style={styles.label}>
-            Senha
+            Nova senha
           </Text>
 
           <View style={styles.inputContainer}>
@@ -105,8 +101,33 @@ export default function Login() {
 
             <TextInput
               style={styles.input}
-              value={senha}
-              onChangeText={setSenha}
+              value={novaSenha}
+              onChangeText={setNovaSenha}
+              placeholder="••••••••••"
+              placeholderTextColor={
+                COLORS.placeholder
+              }
+              secureTextEntry
+            />
+          </View>
+
+          <Text style={styles.label}>
+            Confirmar nova senha
+          </Text>
+
+          <View style={styles.inputContainer}>
+            <Ionicons
+              name="lock-closed-outline"
+              size={20}
+              color={COLORS.blue}
+            />
+
+            <TextInput
+              style={styles.input}
+              value={confirmarSenha}
+              onChangeText={
+                setConfirmarSenha
+              }
               placeholder="••••••••••"
               placeholderTextColor={
                 COLORS.placeholder
@@ -116,56 +137,21 @@ export default function Login() {
           </View>
 
           <Pressable
-            onPress={() =>
-              router.push(
-                '/(auth)/recuperar_senha'
-              )
-            }
-          >
-            <Text
-              style={[
-                styles.link,
-                { textAlign: 'right', marginBottom: 8 },
-              ]}
-            >
-              Esqueceu a senha?
-            </Text>
-          </Pressable>
-
-          <Pressable
             style={[
               styles.button,
 
               carregando &&
                 styles.buttonDisabled,
             ]}
-            onPress={entrar}
+            onPress={redefinir}
             disabled={carregando}
           >
             <Text style={styles.buttonText}>
               {carregando
-                ? 'Entrando...'
-                : 'Entrar'}
+                ? 'Salvando...'
+                : 'Salvar nova senha'}
             </Text>
           </Pressable>
-
-          <View style={styles.linkContainer}>
-            <Text style={styles.linkText}>
-              É novo por aqui?{' '}
-            </Text>
-
-            <Pressable
-              onPress={() =>
-                router.push(
-                  '/(auth)/cadastro'
-                )
-              }
-            >
-              <Text style={styles.link}>
-                Cadastre-se
-              </Text>
-            </Pressable>
-          </View>
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>

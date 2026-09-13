@@ -26,3 +26,18 @@ export function cadastrar(
     },
   });
 }
+
+export function atualizarSenha(novaSenha: string) {
+  return supabase.auth.updateUser({
+    password: novaSenha,
+  });
+}
+
+export function recuperarSenha(email: string) {
+  return supabase.auth.resetPasswordForEmail(
+    email,
+    {
+      redirectTo: 'petsafe://redefinir_senha',
+    }
+  );
+}

@@ -16,10 +16,13 @@ import {
   useFonts,
 } from "@expo-google-fonts/poppins";
 
+import { useAuthDeepLink } from "@/hooks/use-auth-deep-link";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
+  useAuthDeepLink();
 
   const [fontsLoaded] = useFonts({
     Poppins_400Regular,
