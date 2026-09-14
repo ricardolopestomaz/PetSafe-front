@@ -185,7 +185,7 @@ Use este espaço para exemplos de uso do PetSafe: fluxo de cadastro do pet, gera
 ## 🗺️ Roadmap
 
 - [x] Modelo de Negócio (Business Model Canvas)
-- [ ] Levantamento de requisitos funcionais e não funcionais
+- [x] Levantamento de requisitos funcionais e não funcionais
 - [ ] Protótipo no Figma
 - [ ] MVP do site (leitura da medalha via QR Code)
 - [ ] MVP do app (cadastro de tutor e pet)
@@ -231,6 +231,19 @@ Distribuído sob a licença especificada em `LICENSE.txt`. Este projeto é desen
 Equipe PetSafe — Projeto acadêmico UFT
 
 Link do Projeto: [https://github.com/ricardolopestomaz/PetSafe-front](https://github.com/ricardolopestomaz/PetSafe-front)
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+## 📌 Links Úteis
+
+<small>
+📅 <a href="#">Planejamento de Sprints</a><br>
+📊 <a href="https://miro.com/app/board/uXjVHtQToOI=/">Modelo Canvas de Negócio</a><br>
+🎨 <a href="https://www.figma.com/design/hSvEzZ5wsyeYKz5Qq59cww/PetSafe?node-id=0-1&t=WYtdVaVekqN46Zsh-0">Protótipo no Figma</a><br>
+📗 <a href="./docs/requisitos-funcionais.md">Requisitos Funcionais</a><br>
+📙 <a href="./docs/requisitos-n-funcionais.md">Requisitos Não Funcionais</a><br>
+🎭 <a href="./docs/user-stories.md">User Stories</a><br>
+</small>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
