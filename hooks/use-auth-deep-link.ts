@@ -43,7 +43,7 @@ async function tratarUrl(url: string | null) {
     return;
   }
 
-  router.replace('/(auth)/redefinir_senha');
+  router.replace('/(auth)/recuperar_senha');
 }
 
 export function useAuthDeepLink() {
