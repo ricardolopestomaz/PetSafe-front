@@ -105,3 +105,38 @@ export async function realizarCadastro(
     possuiSessao: !!data.session,
   };
 }
+
+export async function realizarRedefinicaoSenha(
+  novaSenha: string,
+  confirmarSenha: string
+): Promise<Resultado> {
+  if (!novaSenha || !confirmarSenha) {
+    return {
+      sucesso: false,
+      mensagem: 'Preencha os dois campos de senha.',
+    };
+  }
+
+  if (novaSenha !== confirmarSenha) {
+    return {
+      sucesso: false,
+      mensagem: 'As senhas não são iguais.',
+    };
+  }
+
+  const { error } =
+    await AuthModel.atualizarSenha(
+      novaSenha
+    );
+
+  if (error) {
+    return {
+      sucesso: false,
+      mensagem: error.message,
+    };
+  }
+
+  return {
+    sucesso: true,
+  };
+}
