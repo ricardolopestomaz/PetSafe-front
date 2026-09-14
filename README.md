@@ -15,11 +15,11 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Contributors](https://img.shields.io/github/contributors/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/network/members)
+[![Stargazers](https://img.shields.io/github/stars/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/stargazers)
+[![Issues](https://img.shields.io/github/issues/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/issues)
+[![MIT License](https://img.shields.io/github/license/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge)](https://github.com/ricardolopestomaz/PetSafe-front/blob/main/LICENSE)
 
 </div>
 
@@ -37,9 +37,9 @@
     <br />
     <a href="#">Ver Demo</a>
     ·
-    <a href="https://github.com/ricardolopestomaz/AuTag/issues/new?labels=bug">Reportar Bug</a>
+    <a href="https://github.com/ricardolopestomaz/PetSafe-front/issues/new?labels=bug">Reportar Bug</a>
     ·
-    <a href="https://github.com/ricardolopestomaz/AuTag/issues/new?labels=enhancement">Solicitar Funcionalidade</a>
+    <a href="https://github.com/ricardolopestomaz/PetSafe-front/issues/new?labels=enhancement">Solicitar Funcionalidade</a>
   </p>
 </div>
 
@@ -74,9 +74,9 @@
 <!-- ABOUT THE PROJECT -->
 ## 🐾 Sobre o Projeto
 
-O **AuTag** é uma medalha inteligente para pets baseada em QR Code/NFC: um hardware 100% passivo — sem bateria e sem necessidade de recarga — integrado a um ecossistema digital que conecta tutores, animais e quem os encontra pela rua.
+O **PetSafe** é uma medalha inteligente para pets baseada em QR Code/NFC: um hardware 100% passivo — sem bateria e sem necessidade de recarga — integrado a um ecossistema digital que conecta tutores, animais e quem os encontra pela rua.
 
-Ao contrário de coleiras GPS tradicionais, a medalha AuTag nunca deixa o pet desprotegido por bateria fraca. Quem encontra o animal basta escanear o código com a câmera do celular — sem precisar instalar aplicativo ou criar conta — e já é direcionado ao contato do tutor. Já para o tutor, o app oferece prontuário, histórico do pet e alertas em tempo real a cada leitura da medalha.
+Ao contrário de coleiras GPS tradicionais, a medalha PetSafe nunca deixa o pet desprotegido por bateria fraca. Quem encontra o animal basta escanear o código com a câmera do celular — sem precisar instalar aplicativo ou criar conta — e já é direcionado ao contato do tutor. Já para o tutor, o app oferece prontuário, histórico do pet e alertas em tempo real a cada leitura da medalha.
 
 **Principais funcionalidades:**
 - 🐶 Cadastro e gerenciamento do perfil do pet e do tutor
@@ -100,7 +100,7 @@ O projeto segue um modelo de **hardware de entrada + assinatura recorrente**: a 
 - **Canais:** venda direta online (site, Mercado Livre, Shopee), pontos físicos em pet shops (B2B2C) e lojas de aplicativos.
 - **Fontes de receita:** venda das medalhas, assinatura Premium mensal, comissões B2B (planos de saúde/seguros) e vendas por atacado.
 
-O detalhamento completo (canvas, unit economics e estratégia de go-to-market) está disponível em <a href="./docs/canvas.md">Modelo Canvas de Negócio</a>.
+O detalhamento completo (canvas, unit economics e estratégia de go-to-market) está disponível em <a href="https://miro.com/app/board/uXjVHtQToOI=/">Modelo Canvas de Negócio</a>.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -137,8 +137,8 @@ Siga os passos abaixo para rodar o site e o app localmente.
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/ricardolopestomaz/AuTag.git
-   cd AuTag/site
+   git clone https://github.com/ricardolopestomaz/PetSafe-front.git
+   cd PetSafe-front/site
    ```
 2. Instale as dependências
    ```sh
@@ -155,7 +155,7 @@ Siga os passos abaixo para rodar o site e o app localmente.
 
 1. Acesse a pasta do app
    ```sh
-   cd AuTag/app
+   cd PetSafe-front/app
    ```
 2. Instale as dependências
    ```sh
@@ -175,7 +175,7 @@ Siga os passos abaixo para rodar o site e o app localmente.
 <!-- USAGE EXAMPLES -->
 ## 📖 Uso
 
-Use este espaço para exemplos de uso do AuTag: fluxo de cadastro do pet, geração/ativação da medalha, e a página que abre quando alguém escaneia o QR Code. Screenshots, GIFs e links de demo funcionam bem aqui.
+Use este espaço para exemplos de uso do PetSafe: fluxo de cadastro do pet, geração/ativação da medalha, e a página que abre quando alguém escaneia o QR Code. Screenshots, GIFs e links de demo funcionam bem aqui.
 
 *Para mais exemplos, consulte a <a href="./docs">documentação</a>.*
 
@@ -185,7 +185,7 @@ Use este espaço para exemplos de uso do AuTag: fluxo de cadastro do pet, geraç
 ## 🗺️ Roadmap
 
 - [x] Modelo de Negócio (Business Model Canvas)
-- [ ] Levantamento de requisitos funcionais e não funcionais
+- [x] Levantamento de requisitos funcionais e não funcionais
 - [ ] Protótipo no Figma
 - [ ] MVP do site (leitura da medalha via QR Code)
 - [ ] MVP do app (cadastro de tutor e pet)
@@ -193,7 +193,7 @@ Use este espaço para exemplos de uso do AuTag: fluxo de cadastro do pet, geraç
 - [ ] Notificações push
 - [ ] Plano Premium (assinatura)
 
-Veja as [issues abertas](https://github.com/ricardolopestomaz/AuTag/issues) para a lista completa de funcionalidades propostas (e problemas conhecidos).
+Veja as [issues abertas](https://github.com/ricardolopestomaz/PetSafe-front/issues) para a lista completa de funcionalidades propostas (e problemas conhecidos).
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -213,10 +213,9 @@ Veja as [issues abertas](https://github.com/ricardolopestomaz/AuTag/issues) para
 
 ### Top contributors:
 
-<a href="https://github.com/ricardolopestomaz/AuTag/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ricardolopestomaz/AuTag" alt="contrib.rocks image" />
+<a href="https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ricardolopestomaz/PetSafe-front" alt="contrib.rocks image" />
 </a>
-
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- LICENSE -->
@@ -229,36 +228,39 @@ Distribuído sob a licença especificada em `LICENSE.txt`. Este projeto é desen
 <!-- CONTACT -->
 ## ✉️ Contato
 
-Equipe AuTag — Projeto acadêmico UFT
+Equipe PetSafe — Projeto acadêmico UFT
 
-Link do Projeto: [https://github.com/ricardolopestomaz/AuTag](https://github.com/ricardolopestomaz/AuTag)
+Link do Projeto: [https://github.com/ricardolopestomaz/PetSafe-front](https://github.com/ricardolopestomaz/PetSafe-front)
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-<!-- USEFUL LINKS -->
 ## 📌 Links Úteis
 
 <small>
-📅 <a href="./docs/sprints.md">Planejamento de Sprints</a><br>
-📊 <a href="./docs/canvas.md">Modelo Canvas de Negócio</a><br>
-🎨 <a href="#">Protótipo no Figma</a><br>
+📅 <a href="#">Planejamento de Sprints</a><br>
+📊 <a href="https://miro.com/app/board/uXjVHtQToOI=/">Modelo Canvas de Negócio</a><br>
+🎨 <a href="https://www.figma.com/design/hSvEzZ5wsyeYKz5Qq59cww/PetSafe?node-id=0-1&t=WYtdVaVekqN46Zsh-0">Protótipo no Figma</a><br>
 📗 <a href="./docs/requisitos-funcionais.md">Requisitos Funcionais</a><br>
 📙 <a href="./docs/requisitos-n-funcionais.md">Requisitos Não Funcionais</a><br>
 🎭 <a href="./docs/user-stories.md">User Stories</a><br>
-⚙️ <a href="./docs/api.md">Documentação da API</a><br>
-🏗️ <a href="./docs/estrutura-do-projeto.md">Estrutura do Projeto</a>
 </small>
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/ricardolopestomaz/AuTag.svg?style=for-the-badge
-[contributors-url]: https://github.com/ricardolopestomaz/AuTag/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ricardolopestomaz/AuTag.svg?style=for-the-badge
-[forks-url]: https://github.com/ricardolopestomaz/AuTag/network/members
-[stars-shield]: https://img.shields.io/github/stars/ricardolopestomaz/AuTag.svg?style=for-the-badge
-[stars-url]: https://github.com/ricardolopestomaz/AuTag/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ricardolopestomaz/AuTag.svg?style=for-the-badge
-[issues-url]: https://github.com/ricardolopestomaz/AuTag/issues
-[license-shield]: https://img.shields.io/github/license/ricardolopestomaz/AuTag.svg?style=for-the-badge
-[license-url]: https://github.com/ricardolopestomaz/AuTag/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[contributors-url]: https://github.com/ricardolopestomaz/PetSafe-front/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[forks-url]: https://github.com/ricardolopestomaz/PetSafe-front/network/members
+[stars-shield]: https://img.shields.io/github/stars/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[stars-url]: https://github.com/ricardolopestomaz/PetSafe-front/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[issues-url]: https://github.com/ricardolopestomaz/PetSafe-front/issues
+[license-shield]: https://img.shields.io/github/license/ricardolopestomaz/PetSafe-front.svg?style=for-the-badge
+[license-url]: https://github.com/ricardolopestomaz/PetSafe-front/blob/main/LICENSE.txt
+
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
