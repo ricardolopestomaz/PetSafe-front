@@ -1,9 +1,3 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
-
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
@@ -34,15 +28,18 @@ export default function RootLayout() {
     return null;
   }
 
+  const isDark = colorScheme === "dark";
+  const backgroundColor = isDark ? "#000000" : "#FFFFFF";
+
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <>
       <Stack
         screenOptions={{
           headerShown: false,
+          contentStyle: { backgroundColor },
         }}
       />
-
-      <StatusBar style="auto" />
-    </ThemeProvider>
+      <StatusBar style={isDark ? "light" : "dark"} />
+    </>
   );
 }
