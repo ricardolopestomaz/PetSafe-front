@@ -1,23 +1,23 @@
-import { useEffect, useRef, useState } from "react";
-import {
-  ActivityIndicator,
-  Animated,
-  FlatList,
-  Image,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-  Pressable,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
 import {
   FontAwesome5,
   Ionicons,
   MaterialCommunityIcons,
   Octicons,
 } from "@expo/vector-icons";
+import { router } from "expo-router";
+import { useEffect, useRef, useState } from "react";
+import {
+  ActivityIndicator,
+  Animated,
+  FlatList,
+  Image,
+  Pressable,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import { COLORS } from "@/global/themes";
 import { listarMeusPets, Pet } from "@/services/pets";
@@ -166,7 +166,9 @@ export default function Home() {
                 contentContainerStyle={styles.containerBotoesScroll}
               >
                 <TouchableOpacity
-                  style={filtroAtivo === "pets" ? styles.botaoAtivo : styles.botao}
+                  style={
+                    filtroAtivo === "pets" ? styles.botaoAtivo : styles.botao
+                  }
                   onPress={() => setFiltroAtivo("pets")}
                 >
                   <Text
@@ -182,7 +184,9 @@ export default function Home() {
 
                 <TouchableOpacity
                   style={
-                    filtroAtivo === "historico" ? styles.botaoAtivo : styles.botao
+                    filtroAtivo === "historico"
+                      ? styles.botaoAtivo
+                      : styles.botao
                   }
                   onPress={() => setFiltroAtivo("historico")}
                 >
@@ -198,7 +202,9 @@ export default function Home() {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  style={filtroAtivo === "outro" ? styles.botaoAtivo : styles.botao}
+                  style={
+                    filtroAtivo === "outro" ? styles.botaoAtivo : styles.botao
+                  }
                   onPress={() => setFiltroAtivo("outro")}
                 >
                   <Text
@@ -235,12 +241,18 @@ export default function Home() {
                 style={styles.loading}
               />
             )}
-            
+
             {/* EMPTY STATE DA LISTA */}
             {filtroAtivo === "pets" && !carregandoPets && pets.length === 0 && (
               <View style={styles.emptyContainer}>
-                <Ionicons name="paw-outline" size={64} color={COLORS.placeholder || "#999999"} />
-                <Text style={styles.emptyText}>Nenhum pet cadastrado ainda.</Text>
+                <Ionicons
+                  name="paw-outline"
+                  size={64}
+                  color={COLORS.placeholder || "#999999"}
+                />
+                <Text style={styles.emptyText}>
+                  Nenhum pet cadastrado ainda.
+                </Text>
               </View>
             )}
 
@@ -280,7 +292,7 @@ export default function Home() {
           <Octicons
             name="home"
             size={20}
-            color={abaAtiva === "home" ? "#FFA800" : "#D1D1D6"}
+            color={abaAtiva === "home" ? COLORS.yellow : COLORS.cinzaclaro}
           />
           {abaAtiva === "home" && <View style={styles.tracoAtivo} />}
         </TouchableOpacity>
@@ -292,7 +304,7 @@ export default function Home() {
           <MaterialCommunityIcons
             name="robot"
             size={20}
-            color={abaAtiva === "ai" ? "#FFA800" : "#D1D1D6"}
+            color={abaAtiva === "ai" ? COLORS.yellow : COLORS.cinzaclaro}
           />
           {abaAtiva === "ai" && <View style={styles.tracoAtivo} />}
         </TouchableOpacity>
@@ -304,7 +316,7 @@ export default function Home() {
           <Ionicons
             name="qr-code-outline"
             size={20}
-            color={abaAtiva === "scanner" ? "#FFA800" : "#D1D1D6"}
+            color={abaAtiva === "scanner" ? COLORS.yellow : COLORS.cinzaclaro}
           />
           {abaAtiva === "scanner" && <View style={styles.tracoAtivo} />}
         </TouchableOpacity>
@@ -316,7 +328,7 @@ export default function Home() {
           <Ionicons
             name="chatbubble-outline"
             size={20}
-            color={abaAtiva === "chat" ? "#FFA800" : "#D1D1D6"}
+            color={abaAtiva === "chat" ? COLORS.yellow : COLORS.cinzaclaro}
           />
           {abaAtiva === "chat" && <View style={styles.tracoAtivo} />}
         </TouchableOpacity>
@@ -328,7 +340,7 @@ export default function Home() {
           <FontAwesome5
             name="paw"
             size={20}
-            color={abaAtiva === "pets" ? "#FFA800" : "#D1D1D6"}
+            color={abaAtiva === "pets" ? COLORS.yellow : COLORS.cinzaclaro}
           />
           {abaAtiva === "pets" && <View style={styles.tracoAtivo} />}
         </TouchableOpacity>
