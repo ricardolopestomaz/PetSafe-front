@@ -28,18 +28,18 @@ export default function RootLayout() {
     return null;
   }
 
+  const isDark = colorScheme === "dark";
+  const backgroundColor = isDark ? "#000000" : "#FFFFFF";
+
   return (
     <>
       <Stack
         screenOptions={{
           headerShown: false,
-          // Define a cor de fundo com base no tema (claro/escuro) diretamente nas opções da Stack
-          contentStyle: {
-            backgroundColor: colorScheme === "dark" ? "#121212" : "#FFFFFF",
-          },
+          contentStyle: { backgroundColor },
         }}
       />
-      <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
+      <StatusBar style={isDark ? "light" : "dark"} />
     </>
   );
 }
