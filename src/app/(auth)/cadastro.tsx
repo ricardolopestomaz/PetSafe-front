@@ -150,7 +150,7 @@ export default function Cadastro() {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.amareloclaro,
+    backgroundColor: COLORS.yellow,
   },
   keyboard: {
     flex: 1,
