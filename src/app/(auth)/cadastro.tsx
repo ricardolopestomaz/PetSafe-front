@@ -1,6 +1,6 @@
-import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
-import { useState } from 'react';
+import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
+import { useState } from "react";
 import {
   Alert,
   KeyboardAvoidingView,
@@ -11,17 +11,17 @@ import {
   Text,
   TextInput,
   View,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import * as AuthController from '@/controller/authController';
-import { COLORS } from '@/global/themes';
+import * as AuthController from "@/controller/authController";
+import { COLORS } from "@/global/themes";
 
 export default function Cadastro() {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
   const [carregando, setCarregando] = useState(false);
 
   async function cadastrar() {
@@ -30,32 +30,29 @@ export default function Cadastro() {
       nome,
       email,
       senha,
-      confirmarSenha
+      confirmarSenha,
     );
     setCarregando(false);
 
     if (!resultado.sucesso) {
-      Alert.alert('Erro ao criar conta', resultado.mensagem);
+      Alert.alert("Erro ao criar conta", resultado.mensagem);
       return;
     }
 
     if (resultado.possuiSessao) {
-      router.replace('/(tabs)');
+      router.replace("/(tabs)");
       return;
     }
 
-    Alert.alert(
-      'Conta criada',
-      'Confira seu e-mail para confirmar sua conta.'
-    );
-    router.replace('/(auth)/login');
+    Alert.alert("Conta criada", "Confira seu e-mail para confirmar sua conta.");
+    router.replace("/(auth)/login");
   }
 
   return (
     <SafeAreaView style={style.container}>
       <KeyboardAvoidingView
         style={style.keyboard}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <View style={style.topArea} />
 
@@ -64,7 +61,7 @@ export default function Cadastro() {
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
           >
-            <Text style={style.title}>Criar uma conta</Text>
+            <Text style={style.title}>Criar conta</Text>
 
             <Text style={style.label}>Nome</Text>
             <View style={style.inputContainer}>
@@ -73,7 +70,7 @@ export default function Cadastro() {
                 style={style.input}
                 value={nome}
                 onChangeText={setNome}
-                placeholder="Nome do Exemplo"
+                placeholder="Insira o seu nome"
                 placeholderTextColor={COLORS.placeholder}
               />
             </View>
@@ -85,7 +82,7 @@ export default function Cadastro() {
                 style={style.input}
                 value={email}
                 onChangeText={setEmail}
-                placeholder="nome_exemplo@gmail.com"
+                placeholder="Digite seu e-mail"
                 placeholderTextColor={COLORS.placeholder}
                 keyboardType="email-address"
                 autoCapitalize="none"
@@ -95,12 +92,16 @@ export default function Cadastro() {
 
             <Text style={style.label}>Senha</Text>
             <View style={style.inputContainer}>
-              <Ionicons name="lock-closed-outline" size={20} color={COLORS.blue} />
+              <Ionicons
+                name="lock-closed-outline"
+                size={20}
+                color={COLORS.blue}
+              />
               <TextInput
                 style={style.input}
                 value={senha}
                 onChangeText={setSenha}
-                placeholder="••••••••••"
+                placeholder="Digite a sua senha"
                 placeholderTextColor={COLORS.placeholder}
                 secureTextEntry
               />
@@ -108,12 +109,16 @@ export default function Cadastro() {
 
             <Text style={style.label}>Confirmar senha</Text>
             <View style={style.inputContainer}>
-              <Ionicons name="lock-closed-outline" size={20} color={COLORS.blue} />
+              <Ionicons
+                name="lock-closed-outline"
+                size={20}
+                color={COLORS.blue}
+              />
               <TextInput
                 style={style.input}
                 value={confirmarSenha}
                 onChangeText={setConfirmarSenha}
-                placeholder="••••••••••"
+                placeholder="Repita a sua senha"
                 placeholderTextColor={COLORS.placeholder}
                 secureTextEntry
               />
@@ -125,13 +130,13 @@ export default function Cadastro() {
               disabled={carregando}
             >
               <Text style={style.buttonText}>
-                {carregando ? 'Criando conta...' : 'Criar conta'}
+                {carregando ? "Criando conta..." : "Criar conta"}
               </Text>
             </Pressable>
 
             <View style={style.linkContainer}>
               <Text style={style.linkText}>Já tem uma conta? </Text>
-              <Pressable onPress={() => router.push('/(auth)/login')}>
+              <Pressable onPress={() => router.push("/(auth)/login")}>
                 <Text style={style.link}>Faça login</Text>
               </Pressable>
             </View>
@@ -145,7 +150,7 @@ export default function Cadastro() {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.blue,
+    backgroundColor: COLORS.yellow,
   },
   keyboard: {
     flex: 1,
@@ -162,13 +167,14 @@ export const style = StyleSheet.create({
     paddingTop: 28,
   },
   title: {
-    fontSize: 20,
-    fontWeight: "700",
+    fontFamily: "Poppins_700Bold",
+    fontSize: 18,
     color: COLORS.blue,
     textAlign: "center",
     marginBottom: 26,
   },
   label: {
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.blue,
     marginBottom: 5,
@@ -185,6 +191,7 @@ export const style = StyleSheet.create({
   },
   input: {
     flex: 1,
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.black,
   },
@@ -200,8 +207,8 @@ export const style = StyleSheet.create({
     opacity: 0.6,
   },
   buttonText: {
+    fontFamily: "Poppins_600SemiBold",
     color: COLORS.white,
-    fontWeight: "600",
     fontSize: 13,
   },
   linkContainer: {
@@ -211,12 +218,13 @@ export const style = StyleSheet.create({
     marginBottom: 20,
   },
   linkText: {
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.black,
   },
   link: {
+    fontFamily: "Poppins_600SemiBold",
     fontSize: 12,
-    fontWeight: "600",
     color: COLORS.yellow,
   },
 });

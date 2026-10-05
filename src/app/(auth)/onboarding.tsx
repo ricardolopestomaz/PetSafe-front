@@ -1,3 +1,4 @@
+import { COLORS } from "@/global/themes";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
@@ -29,7 +30,7 @@ export default function Onboarding() {
       <Image
         source={images[currentIndex]}
         style={style.image}
-        resizeMode="contain"
+        resizeMode="cover"
       />
 
       <View style={style.card}>
@@ -68,7 +69,7 @@ export default function Onboarding() {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: COLORS.white,
   },
   image: {
     width: "100%",
@@ -80,7 +81,7 @@ export const style = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: COLORS.white,
     borderTopLeftRadius: 26,
     borderTopRightRadius: 26,
     paddingHorizontal: 30,
@@ -89,13 +90,13 @@ export const style = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    color: "#1D1E64",
+    color: COLORS.blue,
     fontSize: 22,
     fontFamily: "Poppins_700Bold",
     marginBottom: 10,
   },
   safeColor: {
-    color: "#Feb101",
+    color: COLORS.yellow,
   },
   indicators: {
     flexDirection: "row",
@@ -105,44 +106,43 @@ export const style = StyleSheet.create({
     width: 6,
     height: 6,
     borderRadius: 3,
-    backgroundColor: "#D0D0D0",
+    backgroundColor: COLORS.gray,
     marginHorizontal: 3,
   },
   activeIndicator: {
-    backgroundColor: "#f6d27f",
+    backgroundColor: COLORS.roxoclaro,
     width: 18,
   },
   title: {
-    color: "#222222",
+    color: COLORS.black,
     fontSize: 18,
     fontFamily: "Poppins_700Bold",
     marginBottom: 8,
     textAlign: "center",
   },
   description: {
-    color: "#999999",
+    color: COLORS.placeholder,
     fontSize: 12,
     fontFamily: "Poppins_400Regular",
     textAlign: "center",
   },
   button: {
     width: "100%",
-    height: 40,
-    backgroundColor: "#1D1E64",
-    borderRadius: 5,
+    height: 50,
+    backgroundColor: COLORS.blue,
+    borderRadius: 10,
     marginTop: 20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
   buttonText: {
-    color: "#FFFFFF",
+    color: COLORS.white,
     fontSize: 13,
     fontFamily: "Poppins_600SemiBold",
-    fontWeight: "bold",
   },
   arrow: {
-    color: "#FFFFFF",
+    color: COLORS.white,
     fontSize: 22,
     position: "absolute",
     right: 10,

@@ -13,8 +13,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { supabase } from "@/lib/supabaseClient";
 import { COLORS } from "@/global/themes";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function RecuperarSenha() {
   const [email, setEmail] = useState("");
@@ -51,48 +51,55 @@ export default function RecuperarSenha() {
 
   return (
     <SafeAreaView style={style.container}>
+      {/* Botão de Voltar no Topo */}
+      <View style={style.header}>
+        <Pressable onPress={() => router.back()} style={style.backButton}>
+          <Ionicons name="arrow-back" size={24} color="#1D1E64" />
+        </Pressable>
+      </View>
+
       <KeyboardAvoidingView
         style={style.keyboard}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <View style={style.topArea} />
+        <View style={style.content}>
+          <View style={style.card}>
+            <Text style={style.title}>Recuperar senha</Text>
 
-        <View style={style.card}>
-          <Text style={style.title}>Recuperar senha</Text>
+            <Text style={style.label}>E-mail</Text>
 
-          <Text style={style.label}>E-mail</Text>
+            <View style={style.inputContainer}>
+              <Ionicons name="mail-outline" size={20} color={COLORS.blue} />
 
-          <View style={style.inputContainer}>
-            <Ionicons name="mail-outline" size={20} color={COLORS.blue} />
+              <TextInput
+                style={style.input}
+                value={email}
+                onChangeText={setEmail}
+                placeholder="Digite seu e-mail"
+                placeholderTextColor={COLORS.placeholder}
+                keyboardType="email-address"
+                autoCapitalize="none"
+                autoCorrect={false}
+              />
+            </View>
 
-            <TextInput
-              style={style.input}
-              value={email}
-              onChangeText={setEmail}
-              placeholder="nome_exemplo@gmail.com"
-              placeholderTextColor={COLORS.placeholder}
-              keyboardType="email-address"
-              autoCapitalize="none"
-              autoCorrect={false}
-            />
-          </View>
-
-          <Pressable
-            style={[style.button, carregando && style.buttonDisabled]}
-            onPress={recuperar}
-            disabled={carregando}
-          >
-            <Text style={style.buttonText}>
-              {carregando ? "Enviando..." : "Enviar link"}
-            </Text>
-          </Pressable>
-
-          <View style={style.linkContainer}>
-            <Text style={style.linkText}>Lembrou da senha? </Text>
-
-            <Pressable onPress={() => router.replace("/(auth)/login")}>
-              <Text style={style.link}>Entrar</Text>
+            <Pressable
+              style={[style.button, carregando && style.buttonDisabled]}
+              onPress={recuperar}
+              disabled={carregando}
+            >
+              <Text style={style.buttonText}>
+                {carregando ? "Enviando..." : "Enviar link"}
+              </Text>
             </Pressable>
+
+            <View style={style.linkContainer}>
+              <Text style={style.linkText}>Lembrou da senha? </Text>
+
+              <Pressable onPress={() => router.replace("/(auth)/login")}>
+                <Text style={style.link}>Entrar</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </KeyboardAvoidingView>
@@ -103,44 +110,58 @@ export default function RecuperarSenha() {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: COLORS.white,
+  },
+  header: {
+    paddingHorizontal: 20,
+    paddingTop: 10,
+  },
+  backButton: {
+    width: 40,
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
   },
   keyboard: {
     flex: 1,
   },
-  topArea: {
+  content: {
     flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 30,
+    marginTop: -80,
   },
   card: {
-    backgroundColor: "#FFFFFF",
-    borderTopLeftRadius: 26,
-    borderTopRightRadius: 26,
+    backgroundColor: COLORS.white,
+    borderRadius: 20,
     paddingHorizontal: 24,
-    paddingTop: 28,
-    paddingBottom: 32,
-    elevation: 5,
-    shadowColor: "#000000",
-    shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.08,
+    paddingVertical: 28,
+    elevation: 4,
+    shadowColor: COLORS.black,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
     shadowRadius: 8,
+    borderWidth: 1,
+    borderColor: COLORS.white,
   },
   title: {
     fontFamily: "Poppins_700Bold",
-    fontSize: 26,
-    color: "#1D1E64",
-    marginBottom: 24,
+    fontSize: 20,
+    color: COLORS.blue,
+    marginBottom: 20,
+    textAlign: "center",
   },
   label: {
     fontFamily: "Poppins_600SemiBold",
-    fontSize: 14,
-    color: "#1D1E64",
+    fontSize: 12,
+    color: COLORS.blue,
     marginBottom: 8,
   },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#D4D4D4",
+    borderColor: COLORS.gray,
     borderRadius: 10,
     paddingHorizontal: 14,
     height: 50,
@@ -148,41 +169,41 @@ export const style = StyleSheet.create({
   },
   input: {
     flex: 1,
-    marginLeft: 10,
+    marginLeft: 9,
     fontFamily: "Poppins_400Regular",
-    fontSize: 15,
-    color: "#000000",
+    fontSize: 13,
+    color: COLORS.black,
   },
   button: {
-    height: 50,
-    backgroundColor: "#FFB101",
+    height: 40,
+    backgroundColor: COLORS.yellow,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 8,
+    marginTop: 0,
   },
   buttonDisabled: {
     opacity: 0.6,
   },
   buttonText: {
     fontFamily: "Poppins_700Bold",
-    fontSize: 16,
-    color: "#1D1E64",
+    fontSize: 12,
+    color: COLORS.white,
   },
   linkContainer: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 15,
   },
   linkText: {
     fontFamily: "Poppins_400Regular",
-    fontSize: 14,
-    color: "#000000",
+    fontSize: 12,
+    color: COLORS.black,
   },
   link: {
     fontFamily: "Poppins_600SemiBold",
-    fontSize: 14,
-    color: "#1D1E64",
+    fontSize: 12,
+    color: COLORS.yellow,
   },
 });

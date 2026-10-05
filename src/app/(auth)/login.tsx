@@ -1,3 +1,5 @@
+import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import { useState } from "react";
 import {
   Alert,
@@ -10,11 +12,9 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 
-import { COLORS } from "@/global/themes";
 import * as AuthController from "@/controller/authController";
+import { COLORS } from "@/global/themes";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -53,7 +53,7 @@ export default function Login() {
               style={style.input}
               value={email}
               onChangeText={setEmail}
-              placeholder="nome_exemplo@gmail.com"
+              placeholder="Digite seu e-mail"
               placeholderTextColor={COLORS.placeholder}
               keyboardType="email-address"
               autoCapitalize="none"
@@ -73,7 +73,7 @@ export default function Login() {
               style={style.input}
               value={senha}
               onChangeText={setSenha}
-              placeholder="••••••••••"
+              placeholder="Digite a sua senha"
               placeholderTextColor={COLORS.placeholder}
               secureTextEntry
             />
@@ -81,7 +81,9 @@ export default function Login() {
 
           {/* Campo Esqueceu a Senha */}
           <Pressable onPress={() => router.push("/(auth)/recuperar_senha")}>
-            <Text style={[style.link, { textAlign: "right", marginBottom: 8 }]}>
+            <Text
+              style={[style.linkSenha, { textAlign: "right", marginBottom: 8 }]}
+            >
               Esqueci minha senha
             </Text>
           </Pressable>
@@ -113,7 +115,7 @@ export default function Login() {
 export const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.blue,
+    backgroundColor: COLORS.yellow,
   },
   keyboardView: {
     flex: 1,
@@ -130,13 +132,14 @@ export const style = StyleSheet.create({
     paddingTop: 28,
   },
   title: {
-    fontSize: 20,
-    fontWeight: "700",
+    fontFamily: "Poppins_700Bold",
+    fontSize: 18,
     color: COLORS.blue,
     textAlign: "center",
     marginBottom: 26,
   },
   label: {
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.blue,
     marginBottom: 5,
@@ -153,6 +156,7 @@ export const style = StyleSheet.create({
   },
   input: {
     flex: 1,
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.black,
   },
@@ -168,8 +172,8 @@ export const style = StyleSheet.create({
     opacity: 0.6,
   },
   buttonText: {
+    fontFamily: "Poppins_600SemiBold",
     color: COLORS.white,
-    fontWeight: "600",
     fontSize: 13,
   },
   linkContainer: {
@@ -178,12 +182,18 @@ export const style = StyleSheet.create({
     marginTop: 20,
   },
   linkText: {
+    fontFamily: "Poppins_400Regular",
     fontSize: 12,
     color: COLORS.black,
   },
   link: {
+    fontFamily: "Poppins_600SemiBold",
     fontSize: 12,
-    fontWeight: "600",
     color: COLORS.yellow,
+  },
+  linkSenha: {
+    fontFamily: "Poppins_600SemiBold",
+    fontSize: 12,
+    color: COLORS.blue,
   },
 });
